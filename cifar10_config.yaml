@@ -1,0 +1,36 @@
+agent_name: "cifar10_resnet_v0.0"
+
+model: "ResNet18"
+
+solver:
+  max_iters: 64000
+  eval_period: 1000
+  resume_from: ""
+  load_from: ""
+
+log_config:
+  n_log_iter: 20
+
+summary_config:
+  n_summary_iter: 20
+
+checkpoint_config:
+  n_save_period_iter: 1000
+  save_at_end: True
+
+optimizer_cfg:
+  type: 'SGD'
+  lr: 0.1
+  weight_decay: 0.0005
+  momentum: 0.9
+
+lr_schedule_cfg:
+  type: 'MultiStepLR'
+  milestones: [32000, 48000]
+  gamma: 0.1
+
+data:
+  batch_size_per_gpu: 128
+  num_worker_per_gpu: 2
+  norm_param: [[0.4914, 0.4822, 0.4465],[0.2023, 0.1994, 0.2010]]
+
