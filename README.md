@@ -1,5 +1,5 @@
 # Introduction
-git init It is inspired by [Tensorflow.Estimator](https://github.com/tensorflow/estimator) and is a simplified pytorch-based version.
+Pytorch Agent is a high-level API that simplifies deep learning programming. It is inspired by [Tensorflow.Estimator](https://github.com/tensorflow/estimator) and is a simplified pytorch-based version.
 
 Agent encapsulated training, evaluation and prediction to support implement new algorithms quickly. It implements hook mechanism to provide secure injection and provide predefined hooks.
 
